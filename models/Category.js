@@ -14,7 +14,7 @@ Category.init(
     },
     category_name: {
       type: DataTypes.VARCHAR(100),
-      allowNull: true
+      allowNull: false
     },
   },
   {

@@ -17,15 +17,15 @@ Product.init(
     },
     product_name: {
       type: DataTypes.VARCHAR(100),
-      allowNull: true
+      allowNull: false
     },
     price: {
       type: DataTypes.DECIMAL(10, 2),
-      allowNull: true
+      allowNull: false
     },
     stock: {
       type: DataTypes.INTEGER,
-      allowNull: true,
+      allowNull: false,
     },
     category_id: {
       type: DataTypes.INTEGER,
@@ -34,7 +34,6 @@ Product.init(
       references: {
         model: 'category',
         key: 'id',
-        unique: false
       }
     },
   },
