@@ -20,8 +20,7 @@ Product.belongsToMany(Tag, {
     model: ProductTag,
     unique: false
   },
-  // Define an alias for when data is retrieved
-  as: 'product_tags'
+  foreignKey: 'product_id',
 });
 // Tags belongToMany Products (through ProductTag)
 Tag.belongsToMany(Product, {
@@ -30,7 +29,7 @@ Tag.belongsToMany(Product, {
     unique: false
   },
   // Define an alias for when data is retrieved
-  as: 'tags_product'
+  foreignKey: 'tag_id',
 });
 module.exports = {
   Product,
